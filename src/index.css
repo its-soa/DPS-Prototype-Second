@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 106.25%;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    @apply font-bold tracking-tight text-ink;
+    line-height: 1.25;
+  }
+  :focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  /* Programmatic focus on headings/regions should be visible but calm. */
+  h1:focus-visible, h2:focus-visible, [tabindex='-1']:focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 4px;
+  }
+  ::selection {
+    background: #a8d8d4;
+  }
+}
